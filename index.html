@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stopwatch</title>
+        <style>
+            body { background-color: black; color: white; font-family: 'Courier New', Courier, monospace; }
+            #clock {
+                display: block;
+                font-size: 20pt;
+            }
+            #timer {
+                display: block;
+                position: absolute;
+                width: 20%;
+                max-height: 100%;
+                height: auto;
+                bottom: 0px;
+                top: 0px;
+                overflow: hidden;
+            }
+            #histogram {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                overflow: hidden;
+                height: 100%;
+                width: 80%;
+            }
+            #author {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                height: 12pt;
+                width: 100pt;
+                font-size: 10pt;
+            }
+        </style>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body onkeypress="next()">
+        <div id="timer">
+            <output id="clock">Press a key to start timer.</output>
+            <output id="history">Press a key to record elapsed time to the histogram.</output>
+        </div>
+        <div id="histogram"></div>
+        <div id="author">by robincw</div>
+    </body>
+    <script src="timer.js"></script>
+</html>
