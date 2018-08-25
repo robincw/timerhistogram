@@ -39,10 +39,15 @@
         </style>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
-    <body onkeypress="next()">
+    <body onkeypress="return next(event)">
         <div id="timer">
-            <output id="clock">Press a key to start timer.</output>
-            <output id="history">Press a key to record elapsed time to the histogram.</output>
+            <output id="clock">00:00:00.000</output>
+            <output id="history">
+                <hr />
+                SPACE: record time<br/>
+                DELETE: delete time<br/>
+                P: pause
+            </output>
         </div>
         <div id="histogram"></div>
         <div id="author">by robincw</div>
